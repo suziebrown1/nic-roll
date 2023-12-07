@@ -1,0 +1,64 @@
+# temporary extensions
+> Puzzle piece
+> Manage Extensions
+> Cog
+> Debug Add-on
+> Load Temporary Add-on
+> Select manifest.json
+
+
+
+
+# manifest.json
+
+"description": "Just another browser extension for caging unsuspecting colleagues.",
+"author": "Suzie Brown",
+"homepage_url": "https://github.com/suziebrown1/nic-roll",
+"icons": {
+"48": "icon.png"
+}
+
+
+
+
+# main.js 0
+
+const replacementUrl = 'https://en.wikipedia.org/wiki/Nicolas_Cage';
+
+const linksInPage = document.getElementsByTagName('a');
+
+for (link of linksInPage){
+    link.href = replacementUrl;
+}
+
+
+
+
+# main.js 1
+
+const nicRollProbability = 0.1;
+
+if (Math.random() < nicRollProbability){
+    link.href = replacementUrl;
+}
+
+
+
+
+# main.js 2
+
+const nicRollUrls = [
+    'https://en.wikipedia.org/wiki/Nicolas_Cage',
+    'https://www.imdb.com/name/nm0000115/',
+    'https://www.britannica.com/biography/Nicolas-Cage',
+    'https://www.thecagecage.com/',
+    'https://www.facebook.com/TheNicolasCageAdmirationPage/',
+    'https://www.instagram.com/nicolascagefans/',
+    'https://www.nickcage.movie/',
+]
+
+const pickRandom = (itemsToChooseFrom) => itemsToChooseFrom[Math.floor(Math.random() * itemsToChooseFrom.length)];
+
+if (Math.random() < nicRollProbability){
+    link.href = pickRandom(nicRollUrls);
+}

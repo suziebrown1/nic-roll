@@ -2,16 +2,11 @@
   "manifest_version": 2,
   "name": "NicRoll",
   "version": "1.0",
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["main.js"]
     }
-  ],
-  "description": "Just another browser extension for caging unsuspecting colleagues.",
-  "author": "Suzie Brown",
-  "homepage_url": "https://github.com/suziebrown1/nic-roll",
-  "icons": {
-    "48": "icon.png"
-  }
+  ]
 }
